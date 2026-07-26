@@ -5,71 +5,115 @@ StudyMate Mini is a lightweight, streaming AI academic tutoring web application 
 
 It serves as an interactive live-coding exercise and tutorial to demonstrate real-time LLM response streaming chunk-by-chunk directly to a browser frontend using the Vercel AI SDK.
 
+---
+
 ## Features
 
-* **Real-time AI Chat Streaming (`/api/chat`):** Streams conversational responses in real-time using Vercel AI SDK's `streamText()` primitive and `pipeTextStreamToResponse()`.
-* **Model Agnostic Architecture:** Standardized LLM provider integration via `@ai-sdk/groq` allowing seamless provider switching.
-* **Conversational Context:** Handles multi-turn chat sessions by passing message history state between client and server.
-* **Minimalist Frontend:** Pure HTML5, CSS3, and JavaScript using the native browser `ReadableStream` API.
+- **Real-time AI Chat Streaming (`/api/chat`):** Streams conversational responses in real-time using Vercel AI SDK's `streamText()` and `pipeTextStreamToResponse()`.
+- **Model Agnostic Architecture:** Standardized LLM provider integration via `@ai-sdk/groq`, allowing seamless provider switching.
+- **Conversational Context:** Handles multi-turn chat sessions by passing message history state between the client and server.
+- **Minimalist Frontend:** Pure HTML5, CSS3, and JavaScript using the native browser `ReadableStream` API.
+
+---
 
 ## Tech Stack
 
-* **Backend:** Node.js (ES Modules), Express.js, CORS
-* **AI Provider / SDK:** `@ai-sdk/groq`, `ai` (Vercel AI SDK)
-* **LLM Model:** `llama-3.3-70b-versatile`
-* **Frontend:** HTML5, CSS3, JavaScript (`ReadableStream` API)
+- **Backend:** Node.js (ES Modules), Express.js, CORS
+- **AI Provider / SDK:** `@ai-sdk/groq`, `ai` (Vercel AI SDK)
+- **LLM Model:** `llama-3.3-70b-versatile`
+- **Frontend:** HTML5, CSS3, JavaScript (`ReadableStream` API)
+
+---
 
 ## Recommended VS Code Extensions
 
-* **Prettier - Code Formatter** (`esbenp.prettier-vscode`)
-* **ESLint** (`dbaeumer.vscode-eslint`)
-* **DotENV** (`mikestead.dotenv`)
-* **REST Client** (`humao.rest-client`)
+- **Prettier - Code Formatter** (`esbenp.prettier-vscode`)
+- **ESLint** (`dbaeumer.vscode-eslint`)
+- **DotENV** (`mikestead.dotenv`)
+- **REST Client** (`humao.rest-client`)
+
+---
 
 ## Prerequisites
 
-* [Node.js](https://nodejs.org/) (v18.0.0 or higher)
-* A **Groq API Key** (Get one at [console.groq.com](https://console.groq.com/))
+- [Node.js](https://nodejs.org/) (v18.0.0 or higher)
+- A **Groq API Key** (Get one at https://console.groq.com/)
+
+---
 
 ## GitHub Repository
 
 https://github.com/patrickagu/AI-SDK-DEMO
 
+---
+
 ## Local Setup & Installation
 
-1. **Clone the Repository:**
-   ```bash
-   git clone [https://github.com/patrickagu/AI-SDK-DEMO.git](https://github.com/patrickagu/AI-SDK-DEMO.git)
-   cd AI-SDK
+### 1. Clone the Repository
 
-## Install Dependencies
+```bash
+git clone https://github.com/patrickagu/AI-SDK-DEMO.git
+cd AI-SDK-DEMO
+```
+
+### 2. Install Dependencies
 
 Install Express, CORS, DotENV, the core Vercel AI SDK, and the Groq provider package using npm:
+
+```bash
 npm install express cors dotenv ai @ai-sdk/groq
+```
 
-## Configure Environment Variables
+### 3. Configure Environment Variables
 
-Create a .env file in the root directory:
+Create a `.env` file in the root directory:
+
+```env
 GROQ_API_KEY=your_actual_groq_api_key_here
 PORT=3000
+```
 
-## Configure package.json for ES Modules
+### 4. Configure package.json for ES Modules
 
-In package.json file in the root folder, ensure ES Modules are enabled so modern import statements work properly:
+In the `package.json` file in the root folder, ensure ES Modules are enabled so modern `import` statements work properly.
 
-1. Add "type": "module" to the JSON file.  
-2. Add "dev": "node server.js" inside the "scripts" object.  
+1. Add:
 
+```json
+"type": "module"
+```
 
-## Run the Application when finished with coding
+2. Add the following inside the `"scripts"` object:
 
+```json
+"dev": "node server.js"
+```
+
+---
+
+## Run the Application
+
+When finished with coding, run:
+
+```bash
 npm run dev
-Open http://localhost:3000 in your browser.
+```
+
+Then open:
+
+```
+http://localhost:3000
+```
+
+in your browser.
+
+---
 
 ## Project Structure
 
-demo-ai-sdk-app/
-├── public/                # Static frontend files
+```text
+AI-SDK-DEMO/
+├── public/
 │   ├── index.html         # User interface
 │   ├── style.css          # UI styles
 │   └── app.js             # Client-side streaming reader & DOM handling
@@ -77,3 +121,4 @@ demo-ai-sdk-app/
 ├── package.json           # Node.js dependencies and scripts
 ├── server.js              # Express application backend & AI SDK endpoint
 └── README.md              # Project documentation
+```
