@@ -10,6 +10,10 @@
     
     // Get the trimmed user input value
 
+    // If the user input is empty, do not proceed
+
+    
+
     //Append the user's message to the chat box
     
     // Add the user's message to the chat messages array
