@@ -64,6 +64,10 @@
 
 
 // Function to append a message to the chat box
-
-
-
+function appendMessage(role, content) {
+    const messageDiv = document.createElement('div');
+    messageDiv.classList.add('message', role);
+    messageDiv.textContent = content;
+    document.getElementById('chat-box').appendChild(messageDiv);
+    return messageDiv; // Return the messageDiv
+}
