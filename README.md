@@ -61,6 +61,7 @@ cd AI-SDK-DEMO
 Install Express, CORS, DotENV, the core Vercel AI SDK, and the Groq provider package using npm:
 
 ```bash
+npm init -y
 npm install express cors dotenv ai @ai-sdk/groq
 ```
 
