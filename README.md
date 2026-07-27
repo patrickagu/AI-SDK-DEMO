@@ -90,6 +90,12 @@ In the `package.json` file in the root folder, ensure ES Modules are enabled so 
 "dev": "node server.js"
 ```
 
+3. Ensure the name of the js file is correctly referenced:
+
+````json
+"main": "server.js"
+```
+
 ---
 
 ## Run the Application
