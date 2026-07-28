@@ -1,0 +1,29 @@
+{
+  "name": "demo-ai-sdk",
+  "version": "1.0.0",
+  "description": "StudyMate Mini is a lightweight, streaming AI academic tutoring web application built with **Express.js**, **Node.js**, and the **Vercel AI SDK** powered by **Groq (`llama-3.3-70b-versatile`)**.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patrickagu/AI-SDK-DEMO.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/patrickagu/AI-SDK-DEMO/issues"
+  },
+  "homepage": "https://github.com/patrickagu/AI-SDK-DEMO#readme",
+  "dependencies": {
+    "@ai-sdk/groq": "^4.0.14",
+    "ai": "^7.0.38",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1"
+  }
+}
